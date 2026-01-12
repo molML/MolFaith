@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/benzene_target/GIN/finetuning/hp_tuned_parameters/beta_0.2/data_split_0/checkpoints/GIN_epoch_495.pt",
+      "score": 0.00025347120423578997,
+      "epoch": 495,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.00025347120423578997,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 20,
+    "delta": 1e-05,
+    "counter": 0,
+    "early_stop": false
+  }
+}

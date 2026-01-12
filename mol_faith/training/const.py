@@ -1,0 +1,2 @@
+PERTURBATION_FOLDER_PREFIX = 'alpha_value_'
+DATA_SPLIT_FOLDER_PREFIX = 'data_split_'

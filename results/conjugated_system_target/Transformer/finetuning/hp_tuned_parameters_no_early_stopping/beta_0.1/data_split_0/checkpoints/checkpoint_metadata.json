@@ -1,0 +1,12 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/conjugated_system_target/Transformer/finetuning/hp_tuned_parameters_no_early_stopping/beta_0.1/data_split_0/checkpoints/BasicTransformerRegressor_epoch_443.pt",
+      "score": 0.0024045588030606846,
+      "epoch": 443,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.0024045588030606846,
+  "decreasing": true
+}

@@ -1,0 +1,40 @@
+model:
+  c_hidden: 128
+  c_hidden_head: 256
+  c_in: 0
+  concat: true
+  dp_rate: 0.12258337046168526
+  dp_rate_head: 0.15741082820633068
+  dropout_gat_conv: 0.0
+  embedding_dim: 128
+  feature_provider: pytorch_geometric
+  heads: 2
+  negative_slope: 0.2
+  norm_func: batch_norm
+  num_layers: 4
+  scale_features: false
+training:
+  batch_size: 256
+  dataset_folder_path: /home/marcelhiltscher/Documents/Projects/Faithfulness_Test/datasets/logP/benzene_target/data_split_1
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: 0.1
+  initial_warm_up_epochs: 5
+  keep_n_checkpoints: 1
+  lr: 0.0011225792409048508
+  model_name: GAT
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/benzene_target/GAT/finetuning/hp_tuned_parameters/beta_0.1/data_split_1
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: GAT HP Tuned Parameters - Reduced Heads - Training
+  wandb_group_prefix: finetuning
+  wandb_project_name: Faithfulness_Test
+  wandb_run_name: data_split_1
+  wandb_tags:
+  - data_split_1
+  - beta_0.1
+  weight_decay: 1.0228309207907321e-05

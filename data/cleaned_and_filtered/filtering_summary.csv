@@ -1,0 +1,2 @@
+input_molecules,filtered_molecules,rejected_molecules,retention_rate,rejection_rate,max_sequence_length,max_heavy_atoms,rejected_by_sequence_length,rejected_by_heavy_atoms
+13889,13792,97,99.30%,0.70%,100,50,50,88

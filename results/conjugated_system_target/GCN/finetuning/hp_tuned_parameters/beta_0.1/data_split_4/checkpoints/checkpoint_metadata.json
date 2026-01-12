@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/conjugated_system_target/GCN/finetuning/hp_tuned_parameters/beta_0.1/data_split_4/checkpoints/GCN_epoch_500.pt",
+      "score": 0.00028310902052908204,
+      "epoch": 500,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.00028310902052908204,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 1e-05,
+    "counter": 0,
+    "early_stop": false
+  }
+}

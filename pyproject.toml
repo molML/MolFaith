@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MolFaith"
+authors = [
+    { name = "Marcel Hiltscher", email = "m.hiltscher@tue.nl" },
+]
+description = "A packe that implements the framework of F-Fidelity including hyperparameter tuning, finetuning, and evaluation of F-Fidelity"
+requires-python = ">=3.10"
+dependencies = [
+    "rdkit==2024.9.5",
+    "torch_geometric==2.6.1",
+    "torch==2.8.0",
+    "statsmodels==0.14.5",
+    "optuna==4.0.0",
+    "captum==0.8.0",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "scikit-learn",
+    "scipy",
+    "PyYAML",
+    "plotly",
+    "multiprocess",
+    "pytest",
+    "tqdm",
+    "wandb",
+]
+version = "0.1.0"
+
+[tool.setuptools]
+packages = ["mol_faith"]

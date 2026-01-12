@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/conjugated_system_target/GIN/pretraining/hp_tuned_parameters/data_split_2/checkpoints/GIN_epoch_193.pt",
+      "score": 0.00019432137200551964,
+      "epoch": 193,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.00019432137200551964,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 0.0001,
+    "counter": 0,
+    "early_stop": false
+  }
+}

@@ -1,0 +1,29 @@
+model:
+  c_hidden: 512
+  c_hidden_head: 512
+  dp_rate: 0.11227123545355737
+  dp_rate_head: 0.30909114761160067
+  embedding_dim: 256
+  feature_provider: pytorch_geometric
+  norm_func: batch_norm
+  num_layers: 4
+  scale_features: false
+training:
+  batch_size: 256
+  dataset_folder_path: path/to/benzene_target
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 20
+  initial_warm_up_epochs: 10
+  keep_n_checkpoints: 1
+  lr: 0.0001895576917979346
+  model_name: GIN
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: path/to/output/folder
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: group_name
+  wandb_project_name: project_name
+  weight_decay: 1.4991138761261661e-05
