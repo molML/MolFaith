@@ -166,7 +166,7 @@ The benchmark is organized around four main entry points that build on each othe
 
 The standard workflow is as follows:
 
-**1. *Hyperparameter tuning**
+**1. Hyperparameter tuning**
 
  ``` bash
  python mol_faith/training/hyperparameter_tuning/tune_hyperparams.py --help
