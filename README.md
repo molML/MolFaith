@@ -2,7 +2,7 @@
 
 MolFaith is a benchmarking framework for evaluating the faithfulness of explainable AI methods in molecular property prediction using fidelity-based metrics across 5 models, 3 training tasks, and 8 feature attribution methods.
 
-This is the repository to the preprint [Explaining What Matters: Faithfulness in Molecular Deep Learning](insert_link). 
+This is the repository to the preprint [Explaining What Matters: Faithfulness in Molecular Deep Learning](https://doi.org/10.26434/chemrxiv.10001594/v1). 
 
 
 ## Install
