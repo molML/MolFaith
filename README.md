@@ -23,6 +23,8 @@ After installation, activate the virtual environment:
 source .venv/bin/activate
 ```
 
+Installation should take few seconds only.
+
 ## Project Structure
 
 The repository is organized into three main top-level directories:
@@ -195,3 +197,5 @@ Ground-truth alignment evaluation:
 ``` bash 
 python mol_faith/explanations/gt_evaluation/gt_eval.py --help
 ```
+
+Depending on the entry point the runtime can be very differnt.
