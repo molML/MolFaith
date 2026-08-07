@@ -31,8 +31,8 @@ class GNNExplainer(Explainer):
         super().__init__(use_normalized_attributions=use_normalized_attributions, explanation_method=explanation_method,
                          trained_model_path=trained_model_path, explanation_methods_args=explanation_methods_args)
         self.use_randomized_weights: bool = use_randomized_weights
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.config: DNNConfig = get_config(config_file_path=os.path.join(self.trained_model_path, 'config.yaml'))
+        self.device = self.config.training.device
         self.feature_provider: FeatureProviders = self.get_feature_provider()
         self.model = self.get_model()
         self.attribution_provider = self._get_attribution_provider()

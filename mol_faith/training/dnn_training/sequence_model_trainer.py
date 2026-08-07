@@ -35,7 +35,8 @@ class SequenceModelTrainer(DNNTrainer):
 
     def _get_mask_generator(self):
         if self.config.training.finetune_beta:
-            return SequenceFFidelityMasker(beta=self.config.training.finetune_beta, tokenizer=self.tokenizer)
+            return SequenceFFidelityMasker(beta=self.config.training.finetune_beta, tokenizer=self.tokenizer,
+                                           device=self.config.training.device)
         else:
             return None
 

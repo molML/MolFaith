@@ -72,7 +72,6 @@ class BaseFidelityEvaluator(ABC):
         self.explanation_methods_args = explanation_methods_args
         self.random_seed = random_seed
         self.skip_existing = skip_existing
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self._set_seeds()
         self.is_multi_split = self._detect_multi_split_structure()
 
@@ -332,12 +331,13 @@ class BaseFidelityEvaluator(ABC):
                                   target: float,
                                   threshold_value: float,
                                   evaluation_strategy: EvaluationStrategy,
-                                  data_split_idx: Optional[int]) -> FFidelityResult:
+                                  data_split_idx: Optional[int],
+                                  config: DNNConfig) -> FFidelityResult:
         """
         Evaluate F-Fidelity for a single threshold using pre-computed attributions
         """
         attribution_tensor = torch.tensor(attributions) if not isinstance(attributions, torch.Tensor) else attributions
-        attribution_tensor = attribution_tensor.to(self.device)
+        attribution_tensor = attribution_tensor.to(config.training.device)
 
         # If the xAI method produces only 0 attributions, save the result with corresponding metadata
         if torch.all(attribution_tensor == 0):
@@ -468,7 +468,8 @@ class BaseFidelityEvaluator(ABC):
                         target=target,
                         threshold_value=threshold,
                         evaluation_strategy=evaluation_strategy,
-                        data_split_idx=data_split_idx)
+                        data_split_idx=data_split_idx,
+                        config=config)
                     results_by_evaluation_strategy[evaluation_strategy][threshold].append(result)
 
             if idx % 50 == 0:
@@ -582,7 +583,7 @@ class GNNFidelityEvaluator(BaseFidelityEvaluator):
 
         model.load_params(path=best_model_path)
         model.eval()
-        model.to(self.device)
+        model.to(config.training.device)
 
         return model, config
 
@@ -630,7 +631,8 @@ class GNNFidelityEvaluator(BaseFidelityEvaluator):
 
     def _get_masker(self, config: DNNConfig, n_samples: int = 50) -> Masker:
         """Get graph masker"""
-        return GraphFFidelityMasker(beta=config.training.finetune_beta, n_samples=n_samples)
+        return GraphFFidelityMasker(beta=config.training.finetune_beta, n_samples=n_samples,
+                                    device=config.training.device)
 
     def _create_data(self, smiles: str, target: float, config: DNNConfig) -> Data:
         """Create graph data for a single molecule"""
@@ -645,7 +647,7 @@ class GNNFidelityEvaluator(BaseFidelityEvaluator):
         data.edge_attr = data.edge_attr.float()
         data.edge_index = data.edge_index
 
-        return data.to(self.device)
+        return data.to(config.training.device)
 
     def _get_random_attributions(self, data: Data) -> np.ndarray:
         """Generate random attributions for graph data"""
@@ -694,7 +696,7 @@ class SequenceFidelityEvaluator(BaseFidelityEvaluator):
 
         model.load_params(path=best_model_path)
         model.eval()
-        model.to(self.device)
+        model.to(config.training.device)
 
         return model, config
 
@@ -714,7 +716,8 @@ class SequenceFidelityEvaluator(BaseFidelityEvaluator):
     def _get_masker(self, config, n_samples: int = 50):
         """Get sequence masker"""
         tokenizer = SMILESTokenizer().load_vocab(config.model.vocab_path)
-        return SequenceFFidelityMasker(tokenizer=tokenizer, beta=config.training.finetune_beta, n_samples=n_samples)
+        return SequenceFFidelityMasker(tokenizer=tokenizer, beta=config.training.finetune_beta, n_samples=n_samples,
+                                       device=config.training.device)
 
     def _create_data(self, smiles: str, target: float, config: DNNConfig):
         """Create sequence data"""
@@ -726,7 +729,7 @@ class SequenceFidelityEvaluator(BaseFidelityEvaluator):
             padding=True
         ).unsqueeze(0)
 
-        input_tensor = input_tensor.to(self.device)
+        input_tensor = input_tensor.to(config.training.device)
 
         return input_tensor
 

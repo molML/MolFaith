@@ -33,7 +33,7 @@ class GNNTrainer(DNNTrainer):
 
     def _get_mask_generator(self):
         if self.config.training.finetune_beta:
-            return GraphFFidelityMasker(beta=self.config.training.finetune_beta)
+            return GraphFFidelityMasker(beta=self.config.training.finetune_beta, device=self.config.training.device)
         else:
             return None
 

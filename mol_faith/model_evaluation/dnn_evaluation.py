@@ -62,7 +62,6 @@ class DNNEvaluator(ModelEvaluator):
 
     def __init__(self, model_type: str = 'DNN', figsize=(16, 12)):
         super().__init__(model_type=model_type)
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.metric_names = ['mse', 'rmse', 'mae', 'r2', 'pearson_r', 'f3']
         self.figsize = figsize
         sns.set_palette("husl")
@@ -144,9 +143,10 @@ class DNNEvaluator(ModelEvaluator):
     def _get_masker(self, config: DNNConfig, model_architecture: str, beta: float):
         """Get appropriate masker based on architecture"""
         if model_architecture == "graph":
-            masker = GraphFFidelityMasker(beta=beta)
+            masker = GraphFFidelityMasker(beta=beta, device=config.training.device)
         elif model_architecture == "sequence":
-            masker = SequenceFFidelityMasker(tokenizer=self._get_tokenizer(config), beta=beta)
+            masker = SequenceFFidelityMasker(tokenizer=self._get_tokenizer(config), beta=beta,
+                                             device=config.training.device)
         else:
             raise ValueError(f"Unknown architecture: {model_architecture}")
         return masker
@@ -205,7 +205,7 @@ class DNNEvaluator(ModelEvaluator):
         model = self._get_model(config=config, model_architecture=model_architecture)
         model.load_params(model_path)
         model.eval()
-        model.to(self.device)
+        model.to(config.training.device)
 
         return model, model_architecture, config
 
@@ -241,7 +241,7 @@ class DNNEvaluator(ModelEvaluator):
         for batch in tqdm(data_loader, desc="Evaluating", leave=False):
             with torch.no_grad():
                 if model_architecture == "graph":
-                    batch = batch.to(self.device)
+                    batch = batch.to(config.training.device)
                     if use_masking:
                         mask = masker.create_finetuning_masks(batch)
                         prediction = model(batch, mask)
@@ -250,7 +250,7 @@ class DNNEvaluator(ModelEvaluator):
                     target = batch.y
                 else:  # sequence
                     inputs, target = batch
-                    inputs = inputs.to(self.device)
+                    inputs = inputs.to(config.training.device)
                     if use_masking:
                         mask = masker.create_finetuning_masks(inputs)
                         prediction = model(inputs, mask)

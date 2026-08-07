@@ -1,4 +1,5 @@
 import enum
+import torch
 from dataclasses import dataclass, fields, field
 from typing import List, Optional, Dict, Any
 
@@ -43,6 +44,13 @@ class TrainingConfig:
     wandb_run_name: str = ''  # Will be automatically set or it can be set manually
     wandb_tags: List[str] = field(default_factory=list)  # Can be set manually. HP tuning will set this as well
     wandb_group_prefix: str = ''
+    gpu_index: Optional[int] = None  # Which CUDA device index to train on (None = default device)
+
+    def __post_init__(self):
+        if self.gpu_index is not None:
+            self.device = torch.device(f'cuda:{self.gpu_index}')
+        else:
+            self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 
 @wrapped_hyperparams(kw_only=True)

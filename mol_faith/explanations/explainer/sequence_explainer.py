@@ -27,8 +27,8 @@ class SequenceExplainer(Explainer):
                          trained_model_path=trained_model_path,
                          explanation_methods_args=explanation_methods_args)
         self.use_randomized_weights: bool = use_randomized_weights
-        self.device = 'cuda' if torch.cuda.is_available() else 'cpu'
         self.config: DNNConfig = get_config(config_file_path=os.path.join(self.trained_model_path, 'config.yaml'))
+        self.device = self.config.training.device
         self.tokenizer: SMILESTokenizer = self._load_tokenizer()
         self.model = self.get_model()
         self.attribution_provider = self._get_attribution_provider()

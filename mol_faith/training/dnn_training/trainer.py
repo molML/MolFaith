@@ -25,8 +25,8 @@ logger.setLevel(logging.DEBUG)
 
 class DNNTrainer:
     def __init__(self, config_file_path: str):
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.config = get_config(config_file_path=config_file_path)
+        self.device = self.config.training.device
         self._set_seeds()
         self._setup_components()
 

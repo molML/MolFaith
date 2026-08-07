@@ -72,7 +72,6 @@ class BaseFractionEvaluator(ABC):
         self.explanation_methods_args = explanation_methods_args
         self.random_seed = random_seed
         self.skip_existing = skip_existing
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self._set_seeds()
         self.is_multi_split = self._detect_multi_split_structure()
 
@@ -662,7 +661,7 @@ class GNNFractionEvaluator(BaseFractionEvaluator):
 
         model.load_params(path=best_model_path)
         model.eval()
-        model.to(self.device)
+        model.to(config.training.device)
 
         return model, config
 
@@ -721,7 +720,7 @@ class GNNFractionEvaluator(BaseFractionEvaluator):
         data.edge_attr = data.edge_attr.float()
         data.edge_index = data.edge_index
 
-        return data.to(self.device)
+        return data.to(config.training.device)
 
     def _get_random_attributions(self, data: Data) -> np.ndarray:
         """Generate random attributions for graph data"""
@@ -769,7 +768,7 @@ class SequenceFractionEvaluator(BaseFractionEvaluator):
 
         model.load_params(path=best_model_path)
         model.eval()
-        model.to(self.device)
+        model.to(config.training.device)
 
         return model, config
 
@@ -796,7 +795,7 @@ class SequenceFractionEvaluator(BaseFractionEvaluator):
             padding=True
         ).unsqueeze(0)
 
-        input_tensor = input_tensor.to(self.device)
+        input_tensor = input_tensor.to(config.training.device)
 
         return input_tensor
 

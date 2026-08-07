@@ -15,8 +15,9 @@ class EvaluationStrategy(Enum):
 
 class BaseFidelityMasker(ABC):
     def __init__(self, beta: float = 0.1, alpha_plus_orig: float = 0.5,
-                 alpha_minus_orig: float = 0.5, n_samples: int = 50):
-        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+                 alpha_minus_orig: float = 0.5, n_samples: int = 50,
+                 device: Optional[torch.device] = None):
+        self.device = device if device is not None else torch.device('cuda' if torch.cuda.is_available() else 'cpu')
         self.beta = beta
         self.alpha_plus_orig = alpha_plus_orig
         self.alpha_minus_orig = alpha_minus_orig
@@ -162,8 +163,9 @@ class SequenceFFidelityMasker(BaseFidelityMasker):
     """
 
     def __init__(self, tokenizer: SMILESTokenizer, beta: float,
-                 alpha_plus_orig: float = 0.5, alpha_minus_orig: float = 0.5, n_samples: int = 50):
-        super().__init__(beta, alpha_plus_orig, alpha_minus_orig, n_samples)
+                 alpha_plus_orig: float = 0.5, alpha_minus_orig: float = 0.5, n_samples: int = 50,
+                 device: Optional[torch.device] = None):
+        super().__init__(beta, alpha_plus_orig, alpha_minus_orig, n_samples, device)
         self.tokenizer = tokenizer
 
     def _validate_sequence_inputs(self, data: torch.Tensor, attribution_scores: torch.Tensor):
@@ -338,8 +340,9 @@ class GraphFFidelityMasker(BaseFidelityMasker):
     def __init__(self, beta,
                  alpha_plus_orig: float = 0.5,
                  alpha_minus_orig: float = 0.5,
-                 n_samples: int = 50):
-        super().__init__(beta, alpha_plus_orig, alpha_minus_orig, n_samples)
+                 n_samples: int = 50,
+                 device: Optional[torch.device] = None):
+        super().__init__(beta, alpha_plus_orig, alpha_minus_orig, n_samples, device)
 
     @staticmethod
     def _validate_graph_inputs(data: Data, attribution_scores: torch.Tensor):
