@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/P00519_WT_ABL1/Transformer/pretraining/hp_tuned_parameters/data_split_4/checkpoints/BasicTransformerRegressor_epoch_480.pt",
+      "score": 0.7003463804721832,
+      "epoch": 480,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.7003463804721832,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 20,
+    "delta": 0.0001,
+    "counter": 0,
+    "early_stop": false
+  }
+}

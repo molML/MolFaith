@@ -1,0 +1,34 @@
+model:
+  c_hidden_head: 256
+  d_model: 256
+  dim_feedforward: 1024
+  dp_rate: 0.13527656521510362
+  dp_rate_head: 0.35931939754918585
+  heads: 4
+  max_seq_len: 100
+  num_layers: 4
+  vocab_path: /home/marcelhiltscher/Documents/Datasets/Faithfulness_Test/P00519_WT_ABL1/cleaned_and_filtered/tokenizer_vocab.txt
+training:
+  batch_size: 256
+  dataset_folder_path: /home/marcelhiltscher/Documents/Datasets/Faithfulness_Test/P00519_WT_ABL1/data_splits/data_split_3
+  early_stopping_delta: 0.0001
+  early_stopping_patience: 20
+  finetune_beta: null
+  initial_warm_up_epochs: 15
+  keep_n_checkpoints: 1
+  lr: 0.00014788392230856952
+  model_name: Transformer
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/P00519_WT_ABL1/Transformer/pretraining/hp_tuned_parameters/data_split_3
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: Transformer Pretraining - P00519_WT_ABL1
+  wandb_group_prefix: ''
+  wandb_project_name: Faithfulness_New_Data
+  wandb_run_name: data_split_3
+  wandb_tags:
+  - data_split_3
+  weight_decay: 0.0001712292557634634

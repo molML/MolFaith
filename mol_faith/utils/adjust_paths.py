@@ -282,10 +282,10 @@ def update_vocab_config_file(config_path: str, new_vocab_path: str) -> bool:
 
 
 if __name__ == '__main__':
-    root_dir = 'results/hbond_donor/GIN/finetuning/hp_tuned_parameters/beta_0.1'
-    new_output_base = 'results/hbond_donor/GIN/finetuning/hp_tuned_parameters/beta_0.1'
-    new_dataset_base = 'data/hbond_donor'
-    new_vocab_path = 'data/cleaned_and_filtered/tokenizer_vocab.txt'
+    root_dir = 'results/real_world/ABL1_pki/CNN/finetuning/hp_tuned_parameters/beta_0.1'
+    new_output_base = 'results/real_world/ABL1_pki/CNN/finetuning/hp_tuned_parameters/beta_0.1'
+    new_dataset_base = 'data/real_world/ABL1_pki/data_splits'
+    new_vocab_path = 'data/real_world/ABL1_pki/cleaned_and_filtered/tokenizer_vocab.txt'
 
     find_and_update_configs(
         root_dir=root_dir,

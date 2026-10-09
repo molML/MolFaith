@@ -1,0 +1,3 @@
+SMILES,Target,sequence_length,heavy_atom_count,rejection_reason
+Cc1nc(Nc2ncc(C(=O)Nc3c(C)cccc3Cl)s2)cc(N2CCN(CCOCCOCCNC(=O)C3C(C(=O)O)C(C(=O)O)C3C(=O)O)CC2)n1,9.29,93,54,heavy_atoms>50
+CC(=NN=C(N)N)c1cc(NC(=O)c2cccc(C(=O)Nc3cc(C(C)=NN=C(N)N)cc(C(C)=NN=C(N)N)c3)c2)cc(C(C)=NN=C(N)N)c1,6.2,98,52,heavy_atoms>50

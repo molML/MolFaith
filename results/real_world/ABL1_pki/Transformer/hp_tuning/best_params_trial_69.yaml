@@ -1,0 +1,10 @@
+batch_size: 256
+c_hidden_head: 256
+d_model: 256
+dp_rate: 0.13527656521510362
+dp_rate_head: 0.35931939754918585
+heads: 4
+initial_warm_up_epochs: 15
+lr: 0.00014788392230856952
+num_layers: 4
+weight_decay: 0.0001712292557634634

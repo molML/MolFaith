@@ -1,0 +1,35 @@
+model:
+  c_hidden: 512
+  c_hidden_head: 128
+  c_in: 0
+  dp_rate: 0.28907258793570945
+  dp_rate_head: 0.3729619000310089
+  embedding_dim: 128
+  feature_provider: pytorch_geometric
+  norm_func: graph_norm
+  num_layers: 4
+  scale_features: false
+training:
+  batch_size: 128
+  dataset_folder_path: /home/marcelhiltscher/Documents/Datasets/Faithfulness_Test/P00519_WT_ABL1/data_splits/data_split_4
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: null
+  initial_warm_up_epochs: 20
+  keep_n_checkpoints: 1
+  lr: 0.003854308227148949
+  model_name: GCN
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/P00519_WT_ABL1/GCN/pretraining/hp_tuned_parameters/data_split_4
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: GCN HP Tuned - P00519 WT ABL1 - Training
+  wandb_group_prefix: ''
+  wandb_project_name: Faithfulness_New_Data
+  wandb_run_name: data_split_4
+  wandb_tags:
+  - data_split_4
+  weight_decay: 6.943197223808642e-05

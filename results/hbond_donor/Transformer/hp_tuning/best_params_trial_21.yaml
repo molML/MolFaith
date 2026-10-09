@@ -1,9 +1,0 @@
-batch_size: 64
-c_hidden_head: 256
-d_model: 64
-dp_rate: 0.17184362711944956
-dp_rate_head: 0.40659383711903613
-heads: 4
-lr: 0.0015237463262496918
-num_layers: 4
-weight_decay: 1.0332022575856995e-05
