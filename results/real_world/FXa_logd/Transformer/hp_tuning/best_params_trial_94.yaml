@@ -1,0 +1,10 @@
+batch_size: 64
+c_hidden_head: 128
+d_model: 512
+dp_rate: 0.2319827386319414
+dp_rate_head: 0.14405275394393202
+heads: 4
+initial_warm_up_epochs: 5
+lr: 0.00011998047219478136
+num_layers: 3
+weight_decay: 4.020998581832586e-05

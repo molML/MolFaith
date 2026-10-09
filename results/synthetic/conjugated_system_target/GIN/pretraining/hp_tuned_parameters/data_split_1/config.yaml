@@ -1,0 +1,39 @@
+model:
+  c_hidden: 512
+  c_hidden_head: 512
+  c_in: 0
+  dp_rate: 0.23282339552502457
+  dp_rate_head: 0.10338656312242907
+  embedding_dim: 32
+  feature_provider: pytorch_geometric
+  mlp_act: relu
+  mlp_act_first: false
+  mlp_norm: null
+  mlp_norm_kwargs: null
+  norm_func: graph_norm
+  num_layers: 4
+  scale_features: false
+training:
+  batch_size: 64
+  dataset_folder_path: /home/marcelhiltscher/Documents/Projects/Faithfulness_Test/datasets/logP/largest_conjugated_system/data_split_1
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: null
+  initial_warm_up_epochs: 15
+  keep_n_checkpoints: 1
+  lr: 0.0002901507556663898
+  model_name: GIN
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/conjugated_system_target/GIN/pretraining/hp_tuned_parameters/data_split_1
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: GIN HP Tuned - Conjugated System - Training
+  wandb_group_prefix: ''
+  wandb_project_name: Faithfulness_Test
+  wandb_run_name: data_split_1
+  wandb_tags:
+  - data_split_1
+  weight_decay: 1.0552993160872603e-05

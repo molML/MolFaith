@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/benzene_target/CNN/pretraining/hp_tuned_parameters/data_split_3/checkpoints/BasicCNNRegressor_epoch_283.pt",
+      "score": 0.0005490387669521045,
+      "epoch": 283,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.0005490387669521045,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 0.0001,
+    "counter": 14,
+    "early_stop": false
+  }
+}

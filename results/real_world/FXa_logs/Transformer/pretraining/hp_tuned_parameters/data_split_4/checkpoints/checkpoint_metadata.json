@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/FXA_logs_logd_stratified/logs_results/Transformer/pretraining/hp_tuned_parameters/data_split_4/checkpoints/BasicTransformerRegressor_epoch_285.pt",
+      "score": 0.4452611654996872,
+      "epoch": 285,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.4452611654996872,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 1e-05,
+    "counter": 0,
+    "early_stop": false
+  }
+}

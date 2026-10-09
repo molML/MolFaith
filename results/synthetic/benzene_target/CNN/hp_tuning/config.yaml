@@ -1,0 +1,59 @@
+model:
+  embedding_dim:
+    name: embedding_dim
+    type: categorical
+    choices: [32, 64, 128, 256]
+  c_hidden:
+    name: c_hidden
+    type: categorical
+    choices: [64, 128, 256, 512]
+  dp_rate:
+    name: dp_rate
+    type: float
+    low: 0.1
+    high: 0.3
+  c_hidden_head:
+    name: c_hidden_head
+    type: categorical
+    choices: [64, 128, 256, 512]
+  dp_rate_head:
+    name: dp_rate_head
+    type: float
+    low: 0.1
+    high: 0.5
+  kernel_sizes: [3, 5, 7, 11]
+  vocab_path: /home/mhiltscher/data/logP/cleaned_and_filtered/tokenizer_vocab.txt
+  max_seq_len: 100
+training:
+  lr:
+    name: lr
+    type: float
+    low: 1e-4
+    high: 1e-2
+    log: True
+  initial_warm_up_epochs:
+    name: initial_warm_up_epochs
+    type: categorical
+    choices: [5, 10, 15, 20]
+  batch_size:
+    name: batch_size
+    type: categorical
+    choices: [64, 128, 256]
+  weight_decay:
+    name: weight_decay
+    type: float
+    low: 1e-5
+    high: 1e-2
+    log: True
+  dataset_folder_path: /home/mhiltscher/data/logP/benzene_target
+  moving_avg_window: 5
+  early_stopping_patience: 100
+  early_stopping_delta: 0.0001
+  keep_n_checkpoints: 1
+  model_name: CNN
+  num_epochs: 500
+  output_dir_path: /home/mhiltscher/experiments/faithfulness_test/logP/model_training/hp_tuning/CNN/HP_Tuning_Benzene_Target
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: 'CNN HP Tuning Benzene Target (with pruning)'
+  wandb_project_name: Faithfulness_Test

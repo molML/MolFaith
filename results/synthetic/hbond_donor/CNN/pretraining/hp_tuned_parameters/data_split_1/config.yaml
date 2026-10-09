@@ -1,0 +1,38 @@
+model:
+  c_hidden: 256
+  c_hidden_head: 512
+  dp_rate: 0.10735474422868886
+  dp_rate_head: 0.1446737244919751
+  embedding_dim: 256
+  kernel_sizes:
+  - 3
+  - 5
+  - 7
+  - 11
+  max_seq_len: 100
+  use_se_attention: false
+  vocab_path: /home/marcelhiltscher/Documents/Projects/Faithfulness_Test/datasets/logP/cleaned_and_filtered/tokenizer_vocab.txt
+training:
+  batch_size: 128
+  dataset_folder_path: /home/marcelhiltscher/Documents/Projects/Faithfulness_Test/datasets/logP/hbond_donor/data_split_1
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: null
+  initial_warm_up_epochs: 20
+  keep_n_checkpoints: 1
+  lr: 0.0001503323511969299
+  model_name: CNN
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/hbond_donor/CNN/pretraining/hp_tuned_parameters/data_split_1
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: CNN HP Tuned - HBond Donor - Training
+  wandb_group_prefix: ''
+  wandb_project_name: Faithfulness_Test
+  wandb_run_name: data_split_1
+  wandb_tags:
+  - data_split_1
+  weight_decay: 3.136478029852943e-05

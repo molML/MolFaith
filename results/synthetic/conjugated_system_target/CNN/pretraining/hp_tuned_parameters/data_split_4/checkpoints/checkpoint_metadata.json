@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/conjugated_system_target/CNN/pretraining/hp_tuned_parameters/data_split_4/checkpoints/BasicCNNRegressor_epoch_229.pt",
+      "score": 0.0006544591391998852,
+      "epoch": 229,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.0006544591391998852,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 0.0001,
+    "counter": 0,
+    "early_stop": false
+  }
+}

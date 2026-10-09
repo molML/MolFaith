@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/FXA_logs_logd_stratified/logd_results/GCN/pretraining/hp_tuned_parameters/data_split_4/checkpoints/GCN_epoch_402.pt",
+      "score": 0.10878592543303967,
+      "epoch": 402,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.10878592543303967,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 1e-05,
+    "counter": 0,
+    "early_stop": false
+  }
+}

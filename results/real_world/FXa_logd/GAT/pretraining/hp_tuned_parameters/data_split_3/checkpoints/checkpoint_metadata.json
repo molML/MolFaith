@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/FXA_logs_logd_stratified/logd_results/GAT/pretraining/hp_tuned_parameters/data_split_3/checkpoints/GAT_epoch_413.pt",
+      "score": 0.24251093342900276,
+      "epoch": 413,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.24251093342900276,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 1e-05,
+    "counter": 0,
+    "early_stop": false
+  }
+}

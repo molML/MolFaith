@@ -1,0 +1,34 @@
+model:
+  c_hidden: 256
+  c_hidden_head: 512
+  c_in: 0
+  dp_rate: 0.10946937149756851
+  dp_rate_head: 0.34872265785402523
+  embedding_dim: 64
+  feature_provider: pytorch_geometric
+  norm_func: batch_norm
+  num_layers: 4
+  scale_features: false
+training:
+  batch_size: 64
+  dataset_folder_path: /projects/prjs1679/Data/FXA_solubility_logd_stratified/logd_data_splits
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: null
+  initial_warm_up_epochs: 20
+  keep_n_checkpoints: 1
+  lr: 0.0008623846800034501
+  model_name: GCN
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/FXA_logs_logd_stratified/logd_results/GCN/pretraining/hp_tuned_parameters
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: GCN HP Tuned - FXA LogD - Training
+  wandb_group_prefix: ''
+  wandb_project_name: Faithfulness_New_Data
+  wandb_run_name: ''
+  wandb_tags: []
+  weight_decay: 0.0004617659988822297

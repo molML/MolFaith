@@ -1,0 +1,12 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/Transformer/pretraining/hp_tuned_parameters/data_split_4/checkpoints/BasicTransformerRegressor_epoch_489.pt",
+      "score": 0.31917415728623216,
+      "epoch": 489,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.31917415728623216,
+  "decreasing": true
+}

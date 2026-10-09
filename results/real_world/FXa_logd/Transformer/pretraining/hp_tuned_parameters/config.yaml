@@ -1,0 +1,33 @@
+model:
+  c_hidden_head: 128
+  d_model: 512
+  dim_feedforward: 2048
+  dp_rate: 0.2319827386319414
+  dp_rate_head: 0.14405275394393202
+  heads: 4
+  max_seq_len: 100
+  num_layers: 3
+  vocab_path: /home/marcelhiltscher/Documents/Datasets/Faithfulness_Test/FXA_logs_logd_stratified/cleaned_and_filtered/tokenizer_vocab.txt
+training:
+  batch_size: 64
+  dataset_folder_path: /projects/prjs1679/Data/FXA_solubility_logd_stratified/logd_data_splits
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: null
+  initial_warm_up_epochs: 5
+  keep_n_checkpoints: 1
+  lr: 0.00011998047219478136
+  model_name: Transformer
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/FXA_logs_logd_stratified/logd_results/Transformer/pretraining/hp_tuned_parameters
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: Transformer HP Tuned - FXA LogD - Training
+  wandb_group_prefix: ''
+  wandb_project_name: Faithfulness_New_Data
+  wandb_run_name: ''
+  wandb_tags: []
+  weight_decay: 4.020998581832586e-05
