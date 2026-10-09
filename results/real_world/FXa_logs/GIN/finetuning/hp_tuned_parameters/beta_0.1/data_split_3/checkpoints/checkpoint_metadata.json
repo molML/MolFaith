@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/FXA_logs_logd_stratified/logs_results/GIN/finetuning/hp_tuned_parameters/beta_0.1/data_split_3/checkpoints/GIN_epoch_331.pt",
+      "score": 0.18294158577919006,
+      "epoch": 331,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.18294158577919006,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 1e-05,
+    "counter": 0,
+    "early_stop": false
+  }
+}

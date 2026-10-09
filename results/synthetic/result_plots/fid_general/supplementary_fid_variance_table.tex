@@ -1,0 +1,100 @@
+\begin{table}
+\caption{Summary of normalized F-Fid$^+$ statistics across all model--method--target combinations. The table reports mean, median, standard deviation, and variance of normalized F-Fid$^+$ values across molecules for each configuration. High standard deviation values indicate large input-dependent variation in faithfulness scores within the same model and explanation method.}
+\label{tab:supp_fid_variation}
+\begin{tabular}{lllrllll}
+\toprule
+model & explanation_method & target & n & mean & median & std & var \\
+\midrule
+GIN & IG & Hbond Donor & 6900 & 0.796 & 0.967 & 0.382 & 0.146 \\
+GIN & SHAP & Conjugated System & 6900 & 0.758 & 0.965 & 0.438 & 0.192 \\
+GIN & SHAP & Hbond Donor & 6900 & 0.803 & 0.965 & 0.363 & 0.132 \\
+GCN & SHAP & Hbond Donor & 6900 & 0.775 & 0.939 & 0.377 & 0.142 \\
+GCN & IG & Hbond Donor & 6900 & 0.738 & 0.929 & 0.410 & 0.168 \\
+GIN & IG & Conjugated System & 6900 & 0.644 & 0.909 & 0.535 & 0.286 \\
+GAT & IG & Benzene & 6900 & 0.636 & 0.902 & 0.529 & 0.280 \\
+GAT & SHAP & Benzene & 6900 & 0.587 & 0.884 & 0.566 & 0.321 \\
+GAT & SHAP & Conjugated System & 6900 & 0.738 & 0.883 & 0.371 & 0.138 \\
+GIN & SHAP & Benzene & 6900 & 0.535 & 0.883 & 0.627 & 0.393 \\
+GAT & SHAP & Hbond Donor & 6900 & 0.720 & 0.880 & 0.400 & 0.160 \\
+GAT & IG & Hbond Donor & 6900 & 0.702 & 0.878 & 0.427 & 0.182 \\
+GAT & IG & Conjugated System & 6900 & 0.725 & 0.874 & 0.379 & 0.144 \\
+Transformer & SHAP & Benzene & 6900 & 0.538 & 0.872 & 0.607 & 0.368 \\
+Transformer & IG & Benzene & 6900 & 0.504 & 0.867 & 0.635 & 0.403 \\
+GCN & IG & Benzene & 6900 & 0.568 & 0.862 & 0.578 & 0.334 \\
+GCN & SHAP & Benzene & 6900 & 0.542 & 0.850 & 0.598 & 0.358 \\
+GCN & Guided GradCAM & Hbond Donor & 4572 & 0.562 & 0.830 & 0.553 & 0.306 \\
+GCN & SHAP & Conjugated System & 6900 & 0.581 & 0.789 & 0.518 & 0.268 \\
+GCN & GNNExplainer & Hbond Donor & 6900 & 0.531 & 0.776 & 0.561 & 0.315 \\
+GIN & IG & Benzene & 6900 & 0.408 & 0.732 & 0.682 & 0.465 \\
+Transformer & SHAP & Hbond Donor & 6900 & 0.533 & 0.694 & 0.506 & 0.256 \\
+CNN & SHAP & Benzene & 6900 & 0.485 & 0.693 & 0.576 & 0.332 \\
+CNN & SHAP & Hbond Donor & 6900 & 0.549 & 0.664 & 0.463 & 0.215 \\
+GCN & IG & Conjugated System & 6900 & 0.477 & 0.660 & 0.569 & 0.324 \\
+CNN & IG & Hbond Donor & 6900 & 0.504 & 0.628 & 0.510 & 0.260 \\
+Transformer & IG & Hbond Donor & 6900 & 0.467 & 0.613 & 0.544 & 0.296 \\
+GCN & GradCAM & Hbond Donor & 6900 & 0.357 & 0.594 & 0.665 & 0.442 \\
+GAT & GNNExplainer & Conjugated System & 6900 & 0.396 & 0.570 & 0.608 & 0.370 \\
+CNN & IG & Benzene & 6900 & 0.397 & 0.559 & 0.610 & 0.373 \\
+Transformer & LIME & Hbond Donor & 6900 & 0.417 & 0.556 & 0.573 & 0.329 \\
+GIN & GNNExplainer & Hbond Donor & 6899 & 0.324 & 0.553 & 0.681 & 0.464 \\
+CNN & Guided GradCAM & Hbond Donor & 6864 & 0.421 & 0.549 & 0.571 & 0.326 \\
+GIN & LIME & Conjugated System & 6900 & 0.304 & 0.537 & 0.702 & 0.493 \\
+CNN & LIME & Hbond Donor & 6900 & 0.412 & 0.517 & 0.552 & 0.305 \\
+GCN & Guided GradCAM & Conjugated System & 6095 & 0.342 & 0.498 & 0.629 & 0.396 \\
+Transformer & LIME & Benzene & 6900 & 0.341 & 0.493 & 0.651 & 0.424 \\
+GIN & LIME & Hbond Donor & 6900 & 0.277 & 0.443 & 0.698 & 0.488 \\
+GCN & Guided GradCAM & Benzene & 5677 & 0.255 & 0.415 & 0.698 & 0.487 \\
+Transformer & SHAP & Conjugated System & 6900 & 0.278 & 0.405 & 0.654 & 0.428 \\
+Transformer & KernelSHAP & Hbond Donor & 6900 & 0.301 & 0.401 & 0.620 & 0.385 \\
+Transformer & IG & Conjugated System & 6900 & 0.274 & 0.391 & 0.657 & 0.432 \\
+GCN & LIME & Hbond Donor & 6900 & 0.251 & 0.375 & 0.679 & 0.460 \\
+CNN & SHAP & Conjugated System & 6900 & 0.215 & 0.262 & 0.641 & 0.410 \\
+GAT & GNNExplainer & Hbond Donor & 6900 & 0.181 & 0.260 & 0.688 & 0.473 \\
+CNN & LIME & Benzene & 6900 & 0.228 & 0.255 & 0.656 & 0.430 \\
+GCN & GradCAM & Conjugated System & 6900 & 0.187 & 0.228 & 0.677 & 0.459 \\
+GAT & LIME & Hbond Donor & 6900 & 0.185 & 0.225 & 0.661 & 0.437 \\
+GIN & GNNExplainer & Conjugated System & 6900 & 0.158 & 0.221 & 0.730 & 0.533 \\
+CNN & IG & Conjugated System & 6900 & 0.179 & 0.213 & 0.651 & 0.424 \\
+CNN & GradCAM & Hbond Donor & 6900 & 0.183 & 0.193 & 0.653 & 0.426 \\
+CNN & KernelSHAP & Hbond Donor & 6900 & 0.183 & 0.170 & 0.634 & 0.402 \\
+Transformer & LIME & Conjugated System & 6900 & 0.170 & 0.167 & 0.660 & 0.435 \\
+CNN & LIME & Conjugated System & 6900 & 0.158 & 0.151 & 0.635 & 0.403 \\
+CNN & Guided GradCAM & Benzene & 4258 & 0.151 & 0.107 & 0.669 & 0.448 \\
+Transformer & KernelSHAP & Benzene & 6900 & 0.134 & 0.099 & 0.673 & 0.453 \\
+GCN & LIME & Conjugated System & 6900 & 0.129 & 0.090 & 0.659 & 0.434 \\
+GCN & KernelSHAP & Hbond Donor & 6900 & 0.100 & 0.080 & 0.686 & 0.471 \\
+GAT & LIME & Conjugated System & 6900 & 0.131 & 0.076 & 0.650 & 0.422 \\
+CNN & Guided GradCAM & Conjugated System & 6676 & 0.090 & 0.050 & 0.654 & 0.428 \\
+GAT & KernelSHAP & Hbond Donor & 6900 & 0.089 & 0.037 & 0.658 & 0.434 \\
+GAT & LIME & Benzene & 6900 & 0.099 & 0.022 & 0.685 & 0.470 \\
+GIN & KernelSHAP & Hbond Donor & 6900 & 0.081 & -0.004 & 0.706 & 0.498 \\
+GCN & LIME & Benzene & 6900 & 0.084 & -0.006 & 0.690 & 0.477 \\
+GCN & GNNExplainer & Conjugated System & 6900 & 0.053 & -0.008 & 0.649 & 0.421 \\
+CNN & GradCAM & Benzene & 6900 & 0.070 & -0.009 & 0.660 & 0.436 \\
+GCN & GradCAM & Benzene & 6900 & 0.075 & -0.009 & 0.706 & 0.499 \\
+GIN & LIME & Benzene & 6900 & 0.101 & -0.010 & 0.718 & 0.515 \\
+Transformer & KernelSHAP & Conjugated System & 6900 & 0.034 & -0.027 & 0.662 & 0.438 \\
+GIN & GNNExplainer & Benzene & 6900 & 0.063 & -0.032 & 0.710 & 0.504 \\
+GAT & KernelSHAP & Benzene & 6900 & 0.046 & -0.035 & 0.677 & 0.459 \\
+CNN & KernelSHAP & Benzene & 6900 & 0.040 & -0.037 & 0.662 & 0.439 \\
+GCN & GNNExplainer & Benzene & 6900 & 0.017 & -0.061 & 0.679 & 0.461 \\
+GAT & GNNExplainer & Benzene & 6900 & 0.012 & -0.066 & 0.682 & 0.466 \\
+GAT & KernelSHAP & Conjugated System & 6900 & 0.006 & -0.069 & 0.642 & 0.412 \\
+GIN & KernelSHAP & Conjugated System & 6900 & 0.014 & -0.070 & 0.706 & 0.498 \\
+GCN & KernelSHAP & Benzene & 6900 & -0.004 & -0.082 & 0.672 & 0.451 \\
+CNN & KernelSHAP & Conjugated System & 6900 & -0.041 & -0.086 & 0.630 & 0.397 \\
+GCN & KernelSHAP & Conjugated System & 6900 & -0.040 & -0.098 & 0.635 & 0.403 \\
+CNN & GradCAM & Conjugated System & 6900 & -0.055 & -0.105 & 0.636 & 0.405 \\
+GAT & GraphMask & Hbond Donor & 6900 & -0.059 & -0.116 & 0.662 & 0.438 \\
+GCN & GraphMask & Hbond Donor & 6900 & -0.062 & -0.122 & 0.676 & 0.457 \\
+GAT & GraphMask & Benzene & 6900 & -0.063 & -0.134 & 0.668 & 0.446 \\
+GIN & KernelSHAP & Benzene & 6900 & -0.053 & -0.134 & 0.690 & 0.476 \\
+GCN & GraphMask & Conjugated System & 6900 & -0.087 & -0.138 & 0.636 & 0.405 \\
+GAT & GraphMask & Conjugated System & 6900 & -0.091 & -0.143 & 0.627 & 0.393 \\
+GIN & GraphMask & Hbond Donor & 6900 & -0.086 & -0.145 & 0.687 & 0.473 \\
+GIN & GraphMask & Conjugated System & 6900 & -0.082 & -0.165 & 0.690 & 0.477 \\
+GCN & GraphMask & Benzene & 6900 & -0.101 & -0.172 & 0.665 & 0.443 \\
+GIN & GraphMask & Benzene & 6900 & -0.112 & -0.189 & 0.678 & 0.459 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,10 +1,14 @@
 import enum
-from dataclasses import dataclass, fields, field
-from typing import List, Optional, Dict, Any
+from dataclasses import dataclass, field, fields
+from typing import Any, Dict, List, Optional
 
 from mol_faith.data.data_managers.graph_data_manager import SupportedFeatureProviders
-from mol_faith.model.configs.utils import wrapped_hyperparams, read_config_file, check_if_configs_are_set, \
-    TuningOptions
+from mol_faith.model.configs.utils import (
+    TuningOptions,
+    check_if_configs_are_set,
+    read_config_file,
+    wrapped_hyperparams,
+)
 
 type GCNConfig = BaseGNNConfig
 

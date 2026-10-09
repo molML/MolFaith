@@ -1,3 +1,4 @@
+from __future__ import annotations
 import matplotlib.pyplot as plt
 import numpy as np
 import os
@@ -762,31 +763,30 @@ class DNNEvaluator(ModelEvaluator):
 
 if __name__ == '__main__':
     evaluator = DNNEvaluator()
-    model_configs_multi = [
-        ("CNN",
-         "results/benzene_target/CNN/finetuning/hp_tuned_parameters/beta_0.1"),
-        ("GCN",
-         "results/benzene_target/GCN/finetuning/hp_tuned_parameters/beta_0.1"),
-        ("Transformer",
-         "results/benzene_target/Transformer/finetuning/hp_tuned_parameters/beta_0.1"),
-        ("GAT",
-         "results/benzene_target/GAT/finetuning/hp_tuned_parameters/beta_0.1"),
-        ("GIN",
-         "results/benzene_target/GIN/finetuning/hp_tuned_parameters/beta_0.1")
-    ]
+    # model_configs_multi = [
+    #     ("Transformer",
+    #      "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/Transformer/pretraining/hp_tuned_parameters"),
+    #     ("GCN",
+    #      "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GCN/pretraining/hp_tuned_parameters"),
+    #     ("CNN",
+    #      "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/CNN/pretraining/hp_tuned_parameters"),
+    #     ("GAT",
+    #      "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GAT/pretraining/hp_tuned_parameters"),
+    #     ("GIN",
+    #      "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GIN/pretraining/hp_tuned_parameters")
+    # ]
     
-    multi_results = evaluator.evaluate_multi_model_performance(
-        model_configs=model_configs_multi,
-        data_category="test"
-    )
+    # multi_results = evaluator.evaluate_multi_model_performance(
+    #     model_configs=model_configs_multi,
+    #     data_category="test"
+    # )
     
-    evaluator.save_multi_model_results_to_csv(results=multi_results, csv_path="results/benzene_target/model_comparison/multi_model_comparison.csv")
+    # evaluator.save_multi_model_results_to_csv(results=multi_results, csv_path="/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/model_comparison/multi_model_comparison.csv")
 
-    evaluator.plot_multi_model_performance(
-        results=multi_results,
-        save_path="results/benzene_target/model_comparison/multi_model_comparison.png"
-    )
-
+    # evaluator.plot_multi_model_performance(
+    #     results=multi_results,
+    #     save_path="/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/model_comparison/multi_model_comparison.png"
+    # )
 
     # model_configs = [
     #     ("Transformer",
@@ -816,3 +816,42 @@ if __name__ == '__main__':
     #     results=degradation_results,
     #     save_dir="results/hbond_donor/model_comparison"
     # )
+
+    model_configs = [
+        (
+            "CNN",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/CNN/pretraining/hp_tuned_parameters",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/CNN/finetuning/hp_tuned_parameters",
+        ),
+        (
+            "GAT",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GAT/pretraining/hp_tuned_parameters",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GAT/finetuning/hp_tuned_parameters",
+        ),
+        (
+            "GCN",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GCN/pretraining/hp_tuned_parameters",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GCN/finetuning/hp_tuned_parameters",
+        ),
+        (
+            "GIN",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GIN/pretraining/hp_tuned_parameters",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GIN/finetuning/hp_tuned_parameters",
+        ),
+        (
+            "Transformer",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/Transformer/pretraining/hp_tuned_parameters",
+            "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/Transformer/finetuning/hp_tuned_parameters",
+        ),
+    ]
+
+    degradation_results = evaluator.evaluate_masking_degradation_analysis(
+        model_configs=model_configs,
+        data_category="test",
+        beta_values=[0.1]
+    )
+
+    evaluator.plot_masking_degradation_analysis(
+        results=degradation_results,
+        save_dir="/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/model_comparison"
+    )

@@ -1,0 +1,35 @@
+model:
+  c_hidden_head: 64
+  d_model: 128
+  dim_feedforward: 512
+  dp_rate: 0.1003219893286415
+  dp_rate_head: 0.4130530379328331
+  heads: 4
+  max_seq_len: 100
+  num_layers: 3
+  vocab_path: /home/marcelhiltscher/Documents/Projects/MolFaith/data/cleaned_and_filtered/tokenizer_vocab.txt
+training:
+  batch_size: 64
+  dataset_folder_path: /home/marcelhiltscher/Documents/Projects/MolFaith/data/logp/data_split_2
+  early_stopping_delta: null
+  early_stopping_patience: null
+  finetune_beta: 0.1
+  initial_warm_up_epochs: 20
+  keep_n_checkpoints: 1
+  lr: 0.0006696841122900485
+  model_name: Transformer
+  moving_avg_window: null
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/Transformer/finetuning/hp_tuned_parameters/beta_0.1/data_split_2
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: Transformer HP Tuned - LogP Target - Training No early stopping
+  wandb_group_prefix: finetuning
+  wandb_project_name: Faithfulness_Test
+  wandb_run_name: data_split_2
+  wandb_tags:
+  - data_split_2
+  - beta_0.1
+  weight_decay: 1.7894005478483025e-05

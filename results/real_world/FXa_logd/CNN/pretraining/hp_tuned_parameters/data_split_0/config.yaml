@@ -1,0 +1,38 @@
+model:
+  c_hidden: 512
+  c_hidden_head: 512
+  dp_rate: 0.10735347007801145
+  dp_rate_head: 0.1426138604677037
+  embedding_dim: 32
+  kernel_sizes:
+  - 3
+  - 5
+  - 7
+  - 11
+  max_seq_len: 100
+  use_se_attention: false
+  vocab_path: /home/marcelhiltscher/Documents/Datasets/Faithfulness_Test/FXA_logs_logd_stratified/cleaned_and_filtered/tokenizer_vocab.txt
+training:
+  batch_size: 64
+  dataset_folder_path: /home/marcelhiltscher/Documents/Datasets/Faithfulness_Test/FXA_logs_logd_stratified/logd_data_splits/data_split_0
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: null
+  initial_warm_up_epochs: 15
+  keep_n_checkpoints: 1
+  lr: 0.0005011260408261637
+  model_name: CNN
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/FXA_logs_logd_stratified/logd_results/CNN/pretraining/hp_tuned_parameters/data_split_0
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: CNN HP Tuned - FXA LogD - Training
+  wandb_group_prefix: ''
+  wandb_project_name: Faithfulness_New_Data
+  wandb_run_name: data_split_0
+  wandb_tags:
+  - data_split_0
+  weight_decay: 0.0008741740365400744

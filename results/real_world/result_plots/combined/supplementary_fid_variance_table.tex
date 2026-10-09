@@ -1,0 +1,129 @@
+\begin{table}
+\caption{Summary of normalized F-Fid$^+$ statistics across all model--method--target combinations. The table reports mean, median, standard deviation, and variance of normalized F-Fid$^+$ values across molecules for each configuration.}
+\label{tab:supp_fid_variation}
+\begin{tabular}{lllrllll}
+\toprule
+model & explanation_method & target & n & mean & median & std & var \\
+\midrule
+GCN & SHAP & FXA logD & 500 & 0.580 & 0.816 & 0.569 & 0.323 \\
+GAT & GNNExplainer & FXA logD & 500 & 0.578 & 0.805 & 0.603 & 0.364 \\
+GAT & GNNExplainer & FXA logS & 500 & 0.505 & 0.778 & 0.623 & 0.388 \\
+GIN & IG & FXA logD & 500 & 0.474 & 0.764 & 0.643 & 0.413 \\
+GIN & SHAP & FXA logD & 500 & 0.482 & 0.761 & 0.632 & 0.400 \\
+GAT & IG & FXA logS & 500 & 0.512 & 0.750 & 0.608 & 0.370 \\
+GIN & SHAP & LogP & 6900 & 0.451 & 0.749 & 0.659 & 0.434 \\
+GAT & IG & FXA logD & 500 & 0.557 & 0.747 & 0.552 & 0.305 \\
+GAT & SHAP & FXA logD & 500 & 0.547 & 0.742 & 0.557 & 0.310 \\
+GAT & IG & LogP & 6900 & 0.522 & 0.742 & 0.581 & 0.337 \\
+GAT & SHAP & LogP & 6900 & 0.511 & 0.732 & 0.586 & 0.344 \\
+GIN & SHAP & FXA logS & 500 & 0.455 & 0.718 & 0.651 & 0.424 \\
+GCN & SHAP & LogP & 6900 & 0.450 & 0.694 & 0.628 & 0.395 \\
+GCN & SHAP & FXA logS & 500 & 0.436 & 0.687 & 0.647 & 0.418 \\
+GCN & IG & FXA logD & 500 & 0.460 & 0.676 & 0.612 & 0.374 \\
+GCN & IG & FXA logS & 500 & 0.413 & 0.670 & 0.660 & 0.436 \\
+GCN & IG & LogP & 6900 & 0.424 & 0.659 & 0.638 & 0.408 \\
+GAT & SHAP & FXA logS & 500 & 0.414 & 0.635 & 0.642 & 0.412 \\
+GIN & IG & FXA logS & 500 & 0.381 & 0.600 & 0.667 & 0.445 \\
+GIN & SHAP & ABL1 & 685 & 0.253 & 0.511 & 0.724 & 0.523 \\
+GCN & Guided GradCAM & FXA logD & 496 & 0.310 & 0.479 & 0.669 & 0.448 \\
+GAT & GNNExplainer & LogP & 6900 & 0.305 & 0.473 & 0.664 & 0.441 \\
+GCN & Guided GradCAM & FXA logS & 391 & 0.272 & 0.465 & 0.703 & 0.494 \\
+GIN & IG & LogP & 6900 & 0.260 & 0.449 & 0.706 & 0.498 \\
+GCN & Guided GradCAM & LogP & 6782 & 0.267 & 0.435 & 0.693 & 0.480 \\
+GCN & GradCAM & FXA logS & 500 & 0.244 & 0.408 & 0.679 & 0.461 \\
+GCN & GradCAM & FXA logD & 500 & 0.278 & 0.406 & 0.666 & 0.443 \\
+Transformer & IG & LogP & 6900 & 0.276 & 0.396 & 0.669 & 0.448 \\
+Transformer & SHAP & LogP & 6900 & 0.279 & 0.385 & 0.660 & 0.436 \\
+Transformer & SHAP & FXA logS & 500 & 0.191 & 0.350 & 0.730 & 0.533 \\
+GIN & IG & ABL1 & 685 & 0.177 & 0.349 & 0.735 & 0.540 \\
+CNN & SHAP & LogP & 6900 & 0.267 & 0.340 & 0.628 & 0.394 \\
+CNN & SHAP & ABL1 & 685 & 0.242 & 0.339 & 0.613 & 0.376 \\
+Transformer & IG & FXA logD & 500 & 0.179 & 0.337 & 0.710 & 0.505 \\
+Transformer & SHAP & FXA logD & 500 & 0.181 & 0.321 & 0.716 & 0.513 \\
+GAT & SHAP & ABL1 & 685 & 0.188 & 0.293 & 0.721 & 0.520 \\
+Transformer & IG & ABL1 & 685 & 0.137 & 0.246 & 0.744 & 0.554 \\
+Transformer & SHAP & ABL1 & 685 & 0.135 & 0.238 & 0.749 & 0.562 \\
+Transformer & IG & FXA logS & 500 & 0.141 & 0.231 & 0.740 & 0.547 \\
+CNN & IG & LogP & 6900 & 0.204 & 0.230 & 0.644 & 0.414 \\
+CNN & SHAP & FXA logS & 500 & 0.207 & 0.224 & 0.616 & 0.380 \\
+CNN & IG & FXA logS & 500 & 0.189 & 0.206 & 0.633 & 0.400 \\
+GCN & GradCAM & LogP & 6900 & 0.155 & 0.204 & 0.702 & 0.493 \\
+GAT & IG & ABL1 & 685 & 0.142 & 0.190 & 0.707 & 0.499 \\
+CNN & IG & FXA logD & 500 & 0.159 & 0.170 & 0.625 & 0.391 \\
+CNN & LIME & LogP & 6900 & 0.154 & 0.127 & 0.647 & 0.418 \\
+CNN & SHAP & FXA logD & 500 & 0.144 & 0.120 & 0.608 & 0.370 \\
+Transformer & LIME & LogP & 6900 & 0.138 & 0.100 & 0.671 & 0.450 \\
+GCN & SHAP & ABL1 & 685 & 0.119 & 0.092 & 0.687 & 0.471 \\
+GCN & LIME & FXA logD & 500 & 0.060 & -0.001 & 0.701 & 0.492 \\
+CNN & IG & ABL1 & 685 & 0.059 & -0.004 & 0.596 & 0.355 \\
+Transformer & LIME & FXA logD & 500 & 0.058 & -0.007 & 0.693 & 0.480 \\
+Transformer & LIME & FXA logS & 500 & 0.049 & -0.007 & 0.738 & 0.544 \\
+GIN & LIME & FXA logD & 500 & 0.053 & -0.011 & 0.694 & 0.482 \\
+GIN & GNNExplainer & LogP & 6900 & 0.059 & -0.015 & 0.726 & 0.528 \\
+GCN & LIME & LogP & 6900 & 0.068 & -0.015 & 0.682 & 0.465 \\
+GCN & IG & ABL1 & 685 & 0.083 & -0.020 & 0.661 & 0.437 \\
+CNN & LIME & FXA logS & 500 & 0.049 & -0.027 & 0.564 & 0.318 \\
+CNN & LIME & FXA logD & 500 & 0.034 & -0.028 & 0.584 & 0.341 \\
+GAT & LIME & FXA logD & 500 & 0.034 & -0.031 & 0.670 & 0.449 \\
+CNN & Guided GradCAM & FXA logD & 500 & 0.041 & -0.032 & 0.639 & 0.409 \\
+Transformer & KernelSHAP & LogP & 6900 & 0.032 & -0.036 & 0.657 & 0.431 \\
+GAT & LIME & LogP & 6900 & 0.043 & -0.038 & 0.662 & 0.438 \\
+GIN & LIME & LogP & 6900 & 0.041 & -0.039 & 0.726 & 0.527 \\
+GCN & KernelSHAP & FXA logD & 500 & 0.019 & -0.048 & 0.673 & 0.453 \\
+CNN & LIME & ABL1 & 685 & -0.024 & -0.050 & 0.581 & 0.338 \\
+CNN & KernelSHAP & LogP & 6900 & 0.001 & -0.051 & 0.642 & 0.412 \\
+CNN & Guided GradCAM & LogP & 6900 & -0.005 & -0.059 & 0.658 & 0.433 \\
+CNN & GradCAM & FXA logS & 500 & -0.027 & -0.064 & 0.569 & 0.323 \\
+GAT & KernelSHAP & LogP & 6900 & 0.010 & -0.065 & 0.661 & 0.437 \\
+GIN & LIME & FXA logS & 500 & 0.016 & -0.073 & 0.709 & 0.503 \\
+GCN & GNNExplainer & FXA logS & 500 & -0.010 & -0.074 & 0.745 & 0.555 \\
+Transformer & LIME & ABL1 & 685 & 0.002 & -0.081 & 0.738 & 0.544 \\
+CNN & Guided GradCAM & ABL1 & 685 & -0.083 & -0.085 & 0.565 & 0.319 \\
+CNN & KernelSHAP & ABL1 & 685 & -0.104 & -0.087 & 0.557 & 0.311 \\
+CNN & KernelSHAP & FXA logD & 500 & -0.061 & -0.088 & 0.547 & 0.300 \\
+CNN & KernelSHAP & FXA logS & 500 & -0.044 & -0.090 & 0.547 & 0.299 \\
+GAT & GNNExplainer & ABL1 & 685 & 0.006 & -0.090 & 0.678 & 0.459 \\
+GCN & KernelSHAP & LogP & 6900 & -0.015 & -0.094 & 0.675 & 0.456 \\
+GIN & LIME & ABL1 & 685 & -0.046 & -0.102 & 0.702 & 0.493 \\
+GCN & Guided GradCAM & ABL1 & 685 & -0.002 & -0.102 & 0.647 & 0.419 \\
+Transformer & KernelSHAP & FXA logS & 500 & -0.036 & -0.105 & 0.698 & 0.487 \\
+GAT & KernelSHAP & FXA logD & 500 & -0.056 & -0.108 & 0.665 & 0.442 \\
+GAT & KernelSHAP & FXA logS & 500 & -0.061 & -0.109 & 0.665 & 0.442 \\
+GAT & LIME & FXA logS & 500 & -0.042 & -0.112 & 0.684 & 0.468 \\
+CNN & GradCAM & FXA logD & 500 & -0.079 & -0.114 & 0.561 & 0.315 \\
+Transformer & KernelSHAP & ABL1 & 685 & -0.010 & -0.116 & 0.738 & 0.544 \\
+GCN & KernelSHAP & FXA logS & 500 & -0.086 & -0.121 & 0.661 & 0.437 \\
+CNN & GradCAM & LogP & 6900 & -0.076 & -0.127 & 0.649 & 0.421 \\
+GCN & GraphMask & FXA logD & 500 & -0.057 & -0.130 & 0.655 & 0.429 \\
+GCN & GNNExplainer & ABL1 & 685 & -0.049 & -0.131 & 0.636 & 0.405 \\
+Transformer & KernelSHAP & FXA logD & 500 & -0.053 & -0.131 & 0.678 & 0.460 \\
+CNN & GradCAM & ABL1 & 685 & -0.143 & -0.132 & 0.557 & 0.310 \\
+GCN & GraphMask & FXA logS & 500 & -0.089 & -0.134 & 0.655 & 0.429 \\
+GCN & LIME & FXA logS & 500 & -0.045 & -0.134 & 0.679 & 0.462 \\
+GAT & GraphMask & FXA logS & 500 & -0.070 & -0.135 & 0.641 & 0.411 \\
+GIN & KernelSHAP & LogP & 6900 & -0.059 & -0.146 & 0.709 & 0.502 \\
+GIN & GraphMask & ABL1 & 685 & -0.064 & -0.147 & 0.707 & 0.499 \\
+GIN & KernelSHAP & ABL1 & 685 & -0.074 & -0.153 & 0.671 & 0.450 \\
+GIN & KernelSHAP & FXA logS & 500 & -0.062 & -0.154 & 0.681 & 0.464 \\
+GCN & LIME & ABL1 & 685 & -0.061 & -0.154 & 0.640 & 0.409 \\
+GCN & GradCAM & ABL1 & 685 & -0.067 & -0.155 & 0.641 & 0.411 \\
+GIN & GNNExplainer & ABL1 & 685 & -0.074 & -0.166 & 0.734 & 0.538 \\
+GAT & LIME & ABL1 & 685 & -0.073 & -0.167 & 0.661 & 0.437 \\
+GCN & GraphMask & LogP & 6900 & -0.100 & -0.175 & 0.664 & 0.441 \\
+GIN & GraphMask & FXA logS & 500 & -0.111 & -0.178 & 0.664 & 0.440 \\
+GAT & GraphMask & LogP & 6900 & -0.115 & -0.178 & 0.650 & 0.423 \\
+GCN & GNNExplainer & LogP & 6900 & -0.100 & -0.184 & 0.689 & 0.474 \\
+GCN & KernelSHAP & ABL1 & 685 & -0.131 & -0.189 & 0.626 & 0.392 \\
+GAT & GraphMask & FXA logD & 500 & -0.139 & -0.190 & 0.641 & 0.410 \\
+GIN & GraphMask & LogP & 6900 & -0.096 & -0.192 & 0.706 & 0.498 \\
+GIN & GraphMask & FXA logD & 500 & -0.047 & -0.200 & 0.699 & 0.488 \\
+GCN & GraphMask & ABL1 & 685 & -0.135 & -0.202 & 0.636 & 0.404 \\
+GIN & KernelSHAP & FXA logD & 500 & -0.089 & -0.203 & 0.688 & 0.473 \\
+GAT & KernelSHAP & ABL1 & 685 & -0.119 & -0.211 & 0.664 & 0.441 \\
+GIN & GNNExplainer & FXA logS & 500 & -0.136 & -0.221 & 0.723 & 0.522 \\
+GAT & GraphMask & ABL1 & 685 & -0.118 & -0.222 & 0.666 & 0.444 \\
+GIN & GNNExplainer & FXA logD & 500 & -0.216 & -0.371 & 0.725 & 0.526 \\
+GCN & GNNExplainer & FXA logD & 500 & -0.198 & -0.426 & 0.755 & 0.570 \\
+\bottomrule
+\end{tabular}
+\end{table}

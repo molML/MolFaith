@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/P00519_WT_ABL1/GIN/finetuning/hp_tuned_parameters/beta_0.1/data_split_0/checkpoints/GIN_epoch_482.pt",
+      "score": 0.31071875989437103,
+      "epoch": 482,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.31071875989437103,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 1e-05,
+    "counter": 0,
+    "early_stop": false
+  }
+}

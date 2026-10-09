@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/FXA_logs_logd_stratified/logd_results/CNN/pretraining/hp_tuned_parameters/data_split_4/checkpoints/BasicCNNRegressor_epoch_363.pt",
+      "score": 0.34722745418548584,
+      "epoch": 363,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.34722745418548584,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 1e-05,
+    "counter": 0,
+    "early_stop": false
+  }
+}

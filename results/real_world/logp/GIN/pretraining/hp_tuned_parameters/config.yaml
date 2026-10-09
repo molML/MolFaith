@@ -1,0 +1,38 @@
+model:
+  c_hidden: 512
+  c_hidden_head: 512
+  c_in: 0
+  dp_rate: 0.12375897675629952
+  dp_rate_head: 0.12870278312620403
+  embedding_dim: 32
+  feature_provider: pytorch_geometric
+  mlp_act: relu
+  mlp_act_first: false
+  mlp_norm: null
+  mlp_norm_kwargs: null
+  norm_func: batch_norm
+  num_layers: 3
+  scale_features: false
+training:
+  batch_size: 64
+  dataset_folder_path: /projects/prjs1679/Data/logP/logp
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: null
+  initial_warm_up_epochs: 5
+  keep_n_checkpoints: 1
+  lr: 0.00011957366792783984
+  model_name: GIN
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/logp_target/GIN/pretraining/hp_tuned_parameters
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: GIN HP Tuned - LogP Target - Training
+  wandb_group_prefix: ''
+  wandb_project_name: Faithfulness_Test
+  wandb_run_name: ''
+  wandb_tags: []
+  weight_decay: 0.00014537677105712452

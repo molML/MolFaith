@@ -1,0 +1,40 @@
+model:
+  c_hidden: 512
+  c_hidden_head: 512
+  c_in: 0
+  dp_rate: 0.17354777539018246
+  dp_rate_head: 0.11722005035624078
+  embedding_dim: 128
+  feature_provider: pytorch_geometric
+  mlp_act: relu
+  mlp_act_first: false
+  mlp_norm: null
+  mlp_norm_kwargs: null
+  norm_func: batch_norm
+  num_layers: 4
+  scale_features: false
+training:
+  batch_size: 128
+  dataset_folder_path: /home/marcelhiltscher/Documents/Datasets/Faithfulness_Test/FXA_logs_logd_stratified/logs_data_splits/data_split_0
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: 0.1
+  initial_warm_up_epochs: 20
+  keep_n_checkpoints: 1
+  lr: 0.0001887642696091551
+  model_name: GIN
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/FXA_logs_logd_stratified/logs_results/GIN/finetuning/hp_tuned_parameters/beta_0.1/data_split_0
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: GIN HP Tuned - FXA LogS - Training
+  wandb_group_prefix: finetuning
+  wandb_project_name: Faithfulness_New_Data
+  wandb_run_name: data_split_0
+  wandb_tags:
+  - data_split_0
+  - beta_0.1
+  weight_decay: 0.00022434795256111528
