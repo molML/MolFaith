@@ -1,0 +1,35 @@
+model:
+  c_hidden: 512
+  c_hidden_head: 512
+  c_in: 0
+  dp_rate: 0.14125215333034222
+  dp_rate_head: 0.2812974590392735
+  embedding_dim: 128
+  feature_provider: pytorch_geometric
+  norm_func: graph_norm
+  num_layers: 3
+  scale_features: false
+training:
+  batch_size: 64
+  dataset_folder_path: /home/marcelhiltscher/Documents/Projects/Faithfulness_Test/datasets/logP/hbond_donor/data_split_0
+  early_stopping_delta: 1.0e-05
+  early_stopping_patience: 100
+  finetune_beta: null
+  initial_warm_up_epochs: 10
+  keep_n_checkpoints: 1
+  lr: 0.0003219739337407689
+  model_name: GCN
+  moving_avg_window: 5
+  num_epochs: 500
+  output_dir_path: /home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/hbond_donor/GCN/pretraining/hp_tuned_parameters/data_split_0
+  seed: 45
+  t_mult: 2
+  target_column_name: Target
+  val_frequency: 1
+  wandb_group_name: GCN HP Tuned - Hbond Donor - Training
+  wandb_group_prefix: ''
+  wandb_project_name: Faithfulness_Test
+  wandb_run_name: data_split_0
+  wandb_tags:
+  - data_split_0
+  weight_decay: 1.0325722165461212e-05

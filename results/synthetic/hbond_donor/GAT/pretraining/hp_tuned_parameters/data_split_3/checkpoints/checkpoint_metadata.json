@@ -1,0 +1,18 @@
+{
+  "top_model_paths": [
+    {
+      "path": "/home/marcelhiltscher/Documents/Experiments/Faithfulness_Test/LogP/model_training/hbond_donor/GAT/pretraining/hp_tuned_parameters/data_split_3/checkpoints/GAT_epoch_473.pt",
+      "score": 0.00015014906669173135,
+      "epoch": 473,
+      "is_best": true
+    }
+  ],
+  "best_metric_val": 0.00015014906669173135,
+  "decreasing": true,
+  "early_stopping": {
+    "patience": 100,
+    "delta": 1e-05,
+    "counter": 0,
+    "early_stop": false
+  }
+}
