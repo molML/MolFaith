@@ -42,6 +42,7 @@ mol_faith/
 ├── data/
 │   ├── create_dataset/
 │   │   ├── create_gt_data.py
+│   │   ├── create_multi_readout_data_splits.py
 │   │   ├── create_stratified_data_splits.py
 │   │   └── __init__.py
 │   ├── data_managers/
@@ -118,14 +119,24 @@ mol_faith/
 │   └── __init__.py
 ├── notebooks/
 │   ├── datasets/
+│   │   ├── abl1_pki.ipynb
+│   │   ├── fxa_logs_logd.ipynb
 │   │   ├── logp_dataset_exploration.ipynb
 │   │   └── target_size_analysis.ipynb
 │   ├── results_analysis/
-│   │   ├── fid_general.ipynb
-│   │   ├── fid_topk_thres_analysis.ipynb
-│   │   ├── fid_vs_gt.ipynb
-│   │   ├── gt_general.ipynb
-│   │   ├── model_evaluation.ipynb
+│   │   ├── real_world_data/
+│   │   │   ├── check_ABL1_results.ipynb
+│   │   │   ├── check_logd_results.ipynb
+│   │   │   ├── check_logp_result.ipynb
+│   │   │   ├── check_logs_results.ipynb
+│   │   │   ├── compare_logd_logs_results.ipynb
+│   │   │   └── results_combined.ipynb
+│   │   ├── synthetic_data/
+│   │   │   ├── fid_general.ipynb
+│   │   │   ├── fid_topk_thres_analysis.ipynb
+│   │   │   ├── fid_vs_gt.ipynb
+│   │   │   ├── gt_general.ipynb
+│   │   │   └── model_evaluation.ipynb
 │   │   ├── shared.py
 │   │   └── __init__.py
 │   └── __init__.py
